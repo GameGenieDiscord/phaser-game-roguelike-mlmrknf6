@@ -142,7 +142,7 @@ class MainScene extends Phaser.Scene {
         this.ui.push(this.add.text(16,16,'Level: '+this.level,style).setScrollFactor(0));
         this.ui.push(this.add.text(16,40,'HP: '+this.player.hp+'/'+this.player.maxHp,style).setScrollFactor(0));
         this.ui.push(this.add.text(16,64,'Score: '+this.score,style).setScrollFactor(0));
-        this.ui.push(this.add.text(16,600-32,'[R] Restart  [Arrows] Move',style).setScrollFactor(0));
+        this.ui.push(this.add.text(16,568,'[R] Restart  [Arrows] Move',style).setScrollFactor(0));
     }
     update(){
         const cursors = this.input.keyboard.createCursorKeys();
