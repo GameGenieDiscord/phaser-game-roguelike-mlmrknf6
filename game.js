@@ -159,7 +159,7 @@ class MainScene extends Phaser.Scene {
     tryMove(entity,dx,dy){
         const tx = Math.floor((entity.x+dx*TILE)/TILE);
         const ty = Math.floor((entity.y+dy*TILE)/TILE);
-        if(this.dungeon.map[ty][tx]===1)return false;
+        if(this.dungeon.map[ty] && this.dungeon.map[ty][tx]===1)return false;
         entity.x+=dx*TILE;
         entity.y+=dy*TILE;
         if(entity===this.player){
