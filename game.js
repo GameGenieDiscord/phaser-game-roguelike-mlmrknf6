@@ -200,12 +200,14 @@ class MainScene extends Phaser.Scene {
     }
 }
 
-const config = {
-    type:Phaser.AUTO,
-    width:800,height:600,
-    parent:'game-container',
-    backgroundColor:'#0f0f23',
-    render:{pixelArt:true},
-    scene:MainScene
+window.onload = () => {
+    const config = {
+        type:Phaser.AUTO,
+        width:800,height:600,
+        parent:'game-container',
+        backgroundColor:'#0f0f23',
+        render:{pixelArt:true},
+        scene:MainScene
+    };
+    window.game = new Phaser.Game(config);
 };
-const game = new Phaser.Game(config);
