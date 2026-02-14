@@ -68,6 +68,9 @@ class MainScene extends Phaser.Scene {
         if(this.musicStarted)return;
         this.musicStarted=true;
         if(typeof Tone==='undefined')return;
+        document.body.addEventListener('click',()=>{
+            if(Tone.context.state!=='running')Tone.context.resume();
+        },{once:true});
         const synth = new Tone.PolySynth(Tone.FMSynth).toDestination();
         const bass = new Tone.MonoSynth({oscillator:{type:"sine"},envelope:{attack:0.1,release:0.5}}).toDestination();
         const noise = new Tone.Noise("pink").toDestination();
